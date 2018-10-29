@@ -31,11 +31,29 @@ def date_serial(date, month, year):
     ds += date
     return ds
 
+def print_calendar(month, year):
+    print('Su Mo Tu We Th Fr Sa')
+    print('-' * 21)
+    
+    dow = date_serial(1, month, year) % 7
+    print('   ' * dow, end='' )
+
+    days = max_days_in_month(month, year)
+    for i in range(1, days+1):
+        print('%2d ' % i, end='')
+        if (dow+i)%7==0: print()
+
+    print()
+    print('-' * 21)
+
 def main():
-    d = int(input('Enter day of the nonth: '))
-    m = int(input('Enter the month: '))
-    y = int(input('Enter the year: '))
-    ds = date_serial(d, m, y)
-    print('Date serial for the input date is: ' + str(ds))
+
+    print_calendar(2, 2016)
+
+    # d = int(input('Enter day of the nonth: '))
+    # m = int(input('Enter the month: '))
+    # y = int(input('Enter the year: '))
+    # ds = date_serial(d, m, y)
+    # print('Date serial for the input date is: ' + str(ds))
 
 if __name__=='__main__': main()
