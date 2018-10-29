@@ -5,6 +5,7 @@ max_days_in_year --> returns maximum days of the input year
 max_days_in_month --> returns maximum days of the input month/year
 date_serial --> returns the difference between input d/m/y and 1/1/1900
 '''
+import sys
 
 def is_leap(year):
     return year%400==0 or (year%4==0 and year%100!=0)
@@ -47,8 +48,15 @@ def print_calendar(month, year):
     print('-' * 21)
 
 def main():
+    # sys.argv is a list of all the command line arguments
+    # the file name is the 1st entry in the list
+    # print('sys.argv is ')
+    # print(sys.argv)
 
-    print_calendar(2, 2016)
+    month = int(sys.argv[1]) if len(sys.argv)>1 else 10
+    year = int(sys.argv[2]) if len(sys.argv)>2 else 2018
+
+    print_calendar(month, year)
 
     # d = int(input('Enter day of the nonth: '))
     # m = int(input('Enter the month: '))
