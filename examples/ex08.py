@@ -6,6 +6,7 @@ max_days_in_month --> returns maximum days of the input month/year
 date_serial --> returns the difference between input d/m/y and 1/1/1900
 '''
 import sys
+import datetime
 
 def is_leap(year):
     return year%400==0 or (year%4==0 and year%100!=0)
@@ -53,8 +54,11 @@ def main():
     # print('sys.argv is ')
     # print(sys.argv)
 
-    month = int(sys.argv[1]) if len(sys.argv)>1 else 10
-    year = int(sys.argv[2]) if len(sys.argv)>2 else 2018
+    this_month = datetime.date.today().month
+    this_year = datetime.date.today().year
+
+    month = int(sys.argv[1]) if len(sys.argv)>1 else this_month
+    year = int(sys.argv[2]) if len(sys.argv)>2 else this_year
 
     print_calendar(month, year)
 
