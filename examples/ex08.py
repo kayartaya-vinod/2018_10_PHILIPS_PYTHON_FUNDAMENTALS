@@ -57,9 +57,21 @@ def main():
     this_month = datetime.date.today().month
     this_year = datetime.date.today().year
 
-    month = int(sys.argv[1]) if len(sys.argv)>1 else this_month
-    year = int(sys.argv[2]) if len(sys.argv)>2 else this_year
+    month = sys.argv[1] if len(sys.argv)>1 else this_month
+    year = sys.argv[2] if len(sys.argv)>2 else this_year
 
+    try:
+        month = int(month)
+    except ValueError:
+        print('Invalid month supplied, assuming the current month')
+        month = this_month
+    
+    try:
+        year = int(year)
+    except ValueError:
+        print('Invalid year supplied, assuming the current year')
+        year = this_year
+    
     print_calendar(month, year)
 
     # d = int(input('Enter day of the nonth: '))
