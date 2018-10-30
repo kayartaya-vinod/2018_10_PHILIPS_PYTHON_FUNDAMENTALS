@@ -1,5 +1,6 @@
 # Python fundamentals
 
+By <a href="https://vinod.co/view/whoami"><b>Vinod Kumar Kayartaya</b></a>
 
 <a name="toc">
 
