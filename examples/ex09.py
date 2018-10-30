@@ -16,7 +16,24 @@ def __in_words_2_digits(num):
     return word.strip()
 
 def num2words(num):
-    return __in_words_2_digits(num)
+    if num>999999999:
+        print('Number too big. Try less than 100 crores.')
+        return
+
+    units = []
+    c = 0
+    l1 = ',hundred,thousand,lakh,crore'.split(',')
+    while num>0:
+        div = 10 if c==1 else 100
+        word = __in_words_2_digits(num%div)
+        if word!='': 
+            units.insert(0, word)
+            units.insert(1, l1[c])
+
+        num //= div
+        c += 1
+
+    return ' '.join(units)
 
 def main():
     num = int(sys.argv[1]) if len(sys.argv)>1 else None
