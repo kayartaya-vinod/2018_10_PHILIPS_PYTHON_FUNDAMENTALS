@@ -5,8 +5,6 @@
 
 ### Table of contents
 
-<a href="#toc">[Back to TOC]</a>
-
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#hello_python">Hello, Python</a></li>
@@ -33,7 +31,8 @@
 
 ## Overview
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 <span class="lead">Python</span> is a general purpose, interpreted language created by `Guido van Rossum`, and was released in the year 1991. Python encourages code readability and write fewer lines to express the concepts.
 
 Python supports both procedural and object orinented programming. Many language features support functional programming and aspect-oriented programming.
@@ -61,7 +60,8 @@ Python being a very simple and easy to learn language, can be used for teaching 
 
 ## Hello, Python
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 When you install Python, you get a command `python`. When you run the command with out supplying any script file, it will open a shell known as REPL (Read Eval Print and Loop). The REPL has a command prompt that allows us to execute Python commands directly.
 
 ```
@@ -113,7 +113,8 @@ $ Hello, Python!
 
 ## Variables in Python
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A variable represents a value in the memory. Unlike many other popular languages, in Python there is no need to declare a variable in advance. It is dynamically typed. The datatype of the variable changes based on the value you assign to it. The naming convention for variables (and identifiers in general) is defined in `PEP 8`. 
 
 PEP stands for Python Enhancement Proposal. A PEP is a design document providing information to the Python community, or describing a new feature for Python or its processes or environment. The PEP should provide a concise technical specification of the feature and a rationale for the feature.
@@ -233,7 +234,8 @@ With numeric variables, we can do the following maths:
 
 ## Strings
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A String (class `str`) is a value with in single or double quotes. Strings are immutable (they can't be changed in place). By enclosing a text in 3 single or double quotes, we can even have multiline strings. These multiline strings are usually used for documentation purposes.
 
 ```
@@ -412,7 +414,8 @@ But one strange operation is that you can multiply a string by a number!
 
 ## Selection construct
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 For conditional execution, we can use the `if` statements. The syntax for the same is:
 
 ```python
@@ -564,7 +567,8 @@ days = 29 if condition else 28
 
 ## Using loops
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A loop (iteration) is a programming construct that executes one or more statements repeatedly until the loop condition fails. There are two types of loops - `while` and `for`.
 
 <p class="lead">The "while" loop</p> 
@@ -690,7 +694,8 @@ for i in range(10, 0, -1):
 
 ## Lists
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A `list` is a data structure that represents a sequence of objects. An empty list can be created using a pair of square brackets `[]` or using the constructor.
 
 ```python
@@ -832,7 +837,8 @@ Hello, vijay
 
 ## Tuples
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A `tuple` is a read only data structure. Once the variable is assigned with the values, it can not be changed. Hance they are known as immutable collections. A tuple can be created by simply assigning one or more comma separated values. There are only two methods - `count` and `index`.
 
 Following are different ways to create a tuple:
@@ -883,7 +889,8 @@ The statement `names = "vinod", "shyam"` is an example of tuple `packing`. The r
 
 ## Sets
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A `set` is an `unordered collection` with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference. Curly braces or the set() constructor can be used to create sets. To create an empty set you have to use set() constructor, and not {}; the latter creates an empty `dictionary`.
 
 Here are some examples to create a set:
@@ -958,7 +965,8 @@ The set class includes these methods:
 
 ## Dictionaries
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 Python provides a mapping object collection in the form of `class dict`. The dict contains key-value pairs, which are mutable. 
 
 The keys in a dictionary can be of any arbitrary types. However, the key must be hashable, i.e, values containing lists, dicts, or othermutable types may not be used as keys. If you are planning to use numbers as keys, prefer not to use floating point numbers, since computers store these floating point numbers as approximations.
@@ -1017,7 +1025,8 @@ Here are the list of functions in dict object:
 
 ## Functions
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 A function is a subroutine, a piece of code that can be reused by supplying different parameters at different times. For example, if we want to get the factorial of a number, the logic for calculating the factorial can be generalized and placed in a function, and when needed, we can supply a number to that function as parameter, and obtain the factorial of the same.
 
 A function is created by using the `def` keyword. The `def` keyword must be followed by the function name and the parenthesized list of formal parameters (optional). The statements that form the body of the function start at the next line, and must be indented.
@@ -1160,7 +1169,8 @@ factorial(n=1)
 
 ## Function arguments
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 In Python it is possible to define functions with variable number of arguments. There are three forms, and all of them can be used independent of each other or together.
 
 * Default arguments
@@ -1316,7 +1326,8 @@ country : India
 
 ## Class and objects
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 An object is an instance of a class. A class defines a data type. For example, the data type `int` is a class and the variable that holds a value of int is an object. All objects have unique ids.
 
 In order to create a data type of our own, we can use the keyword `class` to define one.
@@ -1473,7 +1484,8 @@ $
 
 ## Inheritance
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 <span class="lead">Inheritance</span> is a means of `code reusability`. A derived class inherits members from the base class. Syntactically, the derived class declaration takes the base classname as a parameter.
 
 ```python
@@ -1559,7 +1571,8 @@ class SmartPhone(Phone, Camera):
 
 ## Exception handling
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 Often when a script is run, we may encounter some errors. Errors are of two types.
 
 1. *Syntax errors* also known as *parse errors* 
@@ -1784,7 +1797,8 @@ BaseException
 
 ## Raising exceptions
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 We can use the `raise` keyword to report an erroneous situation to Python. This way a function can communicate to the caller of the function that there was a runtime error.
 
 For example, given this function:
@@ -1908,7 +1922,8 @@ $
 
 ## Regular expressions
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 We can use the `raise` keyword to report an erroneous situation to Python. This way a function can communicate to the caller of the function that there was a runtime error.
 
 For example, given this function:
@@ -2032,7 +2047,8 @@ $
 
 ## Modules and packages
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 ### Watch the video : Building and deploying a Python package
 
 
@@ -2158,7 +2174,8 @@ Before executing the above command, make sure you have created an account with `
 
 ## List tricks
 
-<a href="#toc">[Back to TOC]</a>
+<a href="#toc">[Back to TOC]</a><br><br>
+
 The list:
 
 ```
