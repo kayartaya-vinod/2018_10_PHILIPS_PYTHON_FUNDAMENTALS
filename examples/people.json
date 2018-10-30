@@ -1,0 +1,26 @@
+[
+   {
+      "id": "1",
+      "name": "vinod kumar",
+      "email": "vinod@vinod.co",
+      "city": "bangalore"
+   },
+   {
+      "id": "2",
+      "name": "harish kumar",
+      "email": "harish@xmpl.com",
+      "city": "hassan"
+   },
+   {
+      "id": "3",
+      "name": "ramesh iyer",
+      "email": "rameshiyer@example.com",
+      "city": "chennai"
+   },
+   {
+      "id": "4",
+      "name": "kiran",
+      "email": "kiran@someoffice.com",
+      "city": "goa"
+   }
+]
