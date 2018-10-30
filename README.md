@@ -1,6 +1,28 @@
 # Python fundamentals
 
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#hello_python">Hello, Python</a></li>
+<li><a href="#variables_in_python">Variables in Python</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#selection_construct">Selection construct</a></li>
+<li><a href="#using_loops">Using loops</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#tuples">Tuples</a></li>
+<li><a href="#sets">Sets</a></li>
+<li><a href="#dictionaries">Dictionaries</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#function_arguments">Function arguments</a></li>
+<li><a href="#class_and_objects">Class and objects</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#exception_handling">Exception handling</a></li>
+<li><a href="#raising_exceptions">Raising exceptions</a></li>
+<li><a href="#regular_expressions">Regular expressions</a></li>
+<li><a href="#modules_and_packages">Modules and packages</a></li>
+<li><a href="#list_tricks">List tricks</a></li>
+</ul>
 
+<a name="overview">
 ## Overview
 
 <span class="lead">Python</span> is a general purpose, interpreted language created by `Guido van Rossum`, and was released in the year 1991. Python encourages code readability and write fewer lines to express the concepts.
@@ -26,6 +48,7 @@ Features of Python include:
 
 Python being a very simple and easy to learn language, can be used for teaching programming to kids and non-programmers. However, the language offers so many powerful features, it can be used for variety of applications such as Web applications, Scientific and Numeric applications, and creating software prototypes.
 
+<a name="hello_python">
 ## Hello, Python
 
 When you install Python, you get a command `python`. When you run the command with out supplying any script file, it will open a shell known as REPL (Read Eval Print and Loop). The REPL has a command prompt that allows us to execute Python commands directly.
@@ -75,6 +98,7 @@ $ ./hello.py
 $ Hello, Python!
 ```
 
+<a name="variables_in_python">
 ## Variables in Python
 
 A variable represents a value in the memory. Unlike many other popular languages, in Python there is no need to declare a variable in advance. It is dynamically typed. The datatype of the variable changes based on the value you assign to it. The naming convention for variables (and identifiers in general) is defined in `PEP 8`. 
@@ -192,6 +216,7 @@ With numeric variables, we can do the following maths:
 	</tr>
 </table>
 
+<a name="strings">
 ## Strings
 
 A String (class `str`) is a value with in single or double quotes. Strings are immutable (they can't be changed in place). By enclosing a text in 3 single or double quotes, we can even have multiline strings. These multiline strings are usually used for documentation purposes.
@@ -368,6 +393,7 @@ But one strange operation is that you can multiply a string by a number!
 >>> 
 ```
 
+<a name="selection_construct">
 ## Selection construct
 
 For conditional execution, we can use the `if` statements. The syntax for the same is:
@@ -517,6 +543,7 @@ condition = year%400==0 or (year%4==0 and year%100!=0)
 days = 29 if condition else 28
 ````
 
+<a name="using_loops">
 ## Using loops
 
 A loop (iteration) is a programming construct that executes one or more statements repeatedly until the loop condition fails. There are two types of loops - `while` and `for`.
@@ -640,6 +667,7 @@ for i in range(10, 0, -1):
 	print(i)
 ```
 
+<a name="lists">
 ## Lists
 
 A `list` is a data structure that represents a sequence of objects. An empty list can be created using a pair of square brackets `[]` or using the constructor.
@@ -779,6 +807,7 @@ Hello, vijay
 ["vinod", "shyam"]
 ```
 
+<a name="tuples">
 ## Tuples
 
 A `tuple` is a read only data structure. Once the variable is assigned with the values, it can not be changed. Hance they are known as immutable collections. A tuple can be created by simply assigning one or more comma separated values. There are only two methods - `count` and `index`.
@@ -827,6 +856,7 @@ The statement `names = "vinod", "shyam"` is an example of tuple `packing`. The r
 >>> 
 ```
 
+<a name="sets">
 ## Sets
 
 A `set` is an `unordered collection` with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference. Curly braces or the set() constructor can be used to create sets. To create an empty set you have to use set() constructor, and not {}; the latter creates an empty `dictionary`.
@@ -899,6 +929,7 @@ The set class includes these methods:
 * update
 	* Update a set with the union of itself and others.
 
+<a name="dictionaries">
 ## Dictionaries
 
 Python provides a mapping object collection in the form of `class dict`. The dict contains key-value pairs, which are mutable. 
@@ -955,6 +986,7 @@ Here are the list of functions in dict object:
 	* Return a new view of the dictionary’s values.
 
 
+<a name="functions">
 ## Functions
 
 A function is a subroutine, a piece of code that can be reused by supplying different parameters at different times. For example, if we want to get the factorial of a number, the logic for calculating the factorial can be generalized and placed in a function, and when needed, we can supply a number to that function as parameter, and obtain the factorial of the same.
@@ -1095,6 +1127,7 @@ factorial(n=1)
 
 ```
 
+<a name="function_arguments">
 ## Function arguments
 
 In Python it is possible to define functions with variable number of arguments. There are three forms, and all of them can be used independent of each other or together.
@@ -1248,6 +1281,7 @@ country : India
 
 ```
 
+<a name="class_and_objects">
 ## Class and objects
 
 An object is an instance of a class. A class defines a data type. For example, the data type `int` is a class and the variable that holds a value of int is an object. All objects have unique ids.
@@ -1402,6 +1436,7 @@ City : Bangalore
 $ 
 ```
 
+<a name="inheritance">
 ## Inheritance
 
 <span class="lead">Inheritance</span> is a means of `code reusability`. A derived class inherits members from the base class. Syntactically, the derived class declaration takes the base classname as a parameter.
@@ -1485,6 +1520,7 @@ class SmartPhone(Phone, Camera):
     ...
 ```
 
+<a name="exception_handling">
 ## Exception handling
 
 Often when a script is run, we may encounter some errors. Errors are of two types.
@@ -1707,6 +1743,7 @@ BaseException
            +-- ResourceWarning
 ```
 
+<a name="raising_exceptions">
 ## Raising exceptions
 
 We can use the `raise` keyword to report an erroneous situation to Python. This way a function can communicate to the caller of the function that there was a runtime error.
@@ -1828,6 +1865,7 @@ Invalid age. Must be >0 and <120
 $ 
 ```
 
+<a name="regular_expressions">
 ## Regular expressions
 
 We can use the `raise` keyword to report an erroneous situation to Python. This way a function can communicate to the caller of the function that there was a runtime error.
@@ -1949,6 +1987,7 @@ Invalid age. Must be >0 and <120
 $ 
 ```
 
+<a name="modules_and_packages">
 ## Modules and packages
 
 ### Watch the video : Building and deploying a Python package
@@ -2072,6 +2111,7 @@ python3 setup.py sdist upload
 
 Before executing the above command, make sure you have created an account with `http://pypi.python.org` and created a `.pypirc` file in the home directory.
 
+<a name="list_tricks">
 ## List tricks
 
 The list:
