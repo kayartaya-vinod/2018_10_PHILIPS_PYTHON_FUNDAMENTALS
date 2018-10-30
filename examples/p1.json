@@ -1,0 +1,14 @@
+{
+   "id": 1001,
+   "name": "John Doe",
+   "hobbies": [
+      "golfing",
+      "fishing"
+   ],
+   "address": {
+      "city": "Dallas",
+      "state": "Texas",
+      "country": "USA"
+   },
+   "is_married": false
+}
