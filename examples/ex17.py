@@ -9,7 +9,8 @@ class Person:
 
     # overriding the inherited (from object class) method
     def __str__(self):
-        return '{} is {} years old.'.format(self.__name, self.__age)
+        return 'Person [name={}, age={}]'.format(self.name, self.age)
+        # return '{} is {} years old.'.format(self.__name, self.__age)
 
     # readable property for the private __name
     @property
@@ -44,7 +45,24 @@ class Person:
             self.name += value
         return self
 
+    def __lt__(self, value):
+        if value!=None and type(value) in (int, float):
+            return self.age < value
+        if value!=None and type(value) == type(self):
+            return self.age < value.age
+        raise TypeError('Invalid type for < operator')
+
 def main():
+    p1 = Person(name='John', age = 22)
+    p2 = Person(name='Miller', age = 24)
+
+    if p1 < p2:     # executes p1.__lt__(p2)
+        print('{} is younger than {}'.format(p1.name, p2.name))
+    else:
+        print('{} is older (or same age) than {}'.format(p1.name, p2.name))
+
+
+def main_2():
     p1 = Person(name='James', age=30)
     print(p1)
 
