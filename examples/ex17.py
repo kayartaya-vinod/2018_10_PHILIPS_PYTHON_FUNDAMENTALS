@@ -19,7 +19,7 @@ class Person:
     # writable property 'name', which can assign value to __name
     @name.setter
     def name(self, value):
-        if type(value) != str:
+        if value != None and type(value) != str:
             raise TypeError('name must be string')
         self.__name = value
 
@@ -29,14 +29,30 @@ class Person:
 
     @age.setter
     def age(self, value):
-        if type(value) not in (int, float):
+        if value != None and type(value) not in (int, float):
             raise TypeError('age must be a number')
-        if value<1 or value>120:
+        if value != None and (value<1 or value>120):
             raise ValueError('age must be between 1 and 120 years')
 
         self.__age = value
 
+    def __iadd__(self, value):
+        if value==None: return self
+        if type(value) in (int, float):
+            self.age += value
+        if type(value) == str:
+            self.name += value
+        return self
+
 def main():
+    p1 = Person(name='James', age=30)
+    print(p1)
+
+    p1 += 5         # expect p1's age to be added with 5
+    p1 += ' Bond'   # expect p1's name to be appended with ' Bond'
+    print(p1)
+
+def main_1():
     p1 = Person(name='Krishna', age=50)
     p2 = Person(name='Harish', age=15)
     p1.age = 22     # try with non-numeric or outside range of 1-120
